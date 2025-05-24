@@ -9,1217 +9,451 @@
         body {
             margin: 0;
             min-height: 100vh;
-            background: #2c1810;
+            background: #1a1a1a;
             overflow-x: hidden;
-            transition: background-color 0.3s ease;
             display: flex;
             flex-direction: column;
-        }
-
-        /* Dark mode styles */
-        body.dark-mode {
-            background: #0a0a0a;
-        }
-
-        /* Add transitions for all elements that change in dark mode */
-        .header,
-        .notebook-page,
-        .section-title,
-        .project-title,
-        .blog-title,
-        .blog-post,
-        .blog-post h1,
-        .blog-post .content,
-        .blog-post .content h2,
-        .blog-post .content h3,
-        .project-card,
-        .blog-preview,
-        .blog-post,
-        .blog-post .content a,
-        .project-link,
-        .view-all-link,
-        .section-title::after,
-        .blog-date,
-        .project-tech,
-        .contact-section p,
-        .contact-links a,
-        .blog-post .content code,
-        .blog-post .content pre,
-        .blog-post .content blockquote,
-        .back-link {
-            transition: all 0.3s ease;
-        }
-
-        body.dark-mode .header {
-            background: linear-gradient(45deg, rgba(0,0,0,0.8) 0%, transparent 50%, rgba(0,0,0,0.8) 100%), url('images/leather.png');
-            background-size: 100% auto;
-            background-position: center bottom;
-            background-repeat: no-repeat;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.8), inset 0 1px 1px rgba(255,255,255,0.05);
-        }
-        body.dark-mode .notebook-page {
-            background: #1a1a1a;
-            box-shadow: 0 0 0 1px #111, 0 0 0 2px #222, 0 0 20px rgba(0,0,0,0.8);
-        }
-        body.dark-mode .section-title,
-        body.dark-mode .project-title,
-        body.dark-mode .blog-title,
-        body.dark-mode .blog-post,
-        body.dark-mode .blog-post h1,
-        body.dark-mode .blog-post .content,
-        body.dark-mode .blog-post .content h2,
-        body.dark-mode .blog-post .content h3 {
-            color: #e0e0e0 !important;
-        }
-        body.dark-mode .project-card,
-        body.dark-mode .blog-preview,
-        body.dark-mode .blog-post {
-            background: #1a1a1a;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        body.dark-mode .blog-post .content a,
-        body.dark-mode .project-link,
-        body.dark-mode .view-all-link {
-            color: #b0b0b0;
-        }
-        body.dark-mode .blog-post .content a:hover,
-        body.dark-mode .project-link:hover,
-        body.dark-mode .view-all-link:hover {
-            color: #ffffff;
-        }
-        body.dark-mode .section-title::after {
-            background: #b0b0b0;
-        }
-        body.dark-mode .blog-date,
-        body.dark-mode .project-tech {
-            color: #b0b0b0;
-        }
-        body.dark-mode .contact-section p {
             color: #e0e0e0;
-        }
-        body.dark-mode .contact-links a {
-            color: #b0b0b0;
-        }
-        body.dark-mode .contact-links a:hover {
-            color: #ffffff;
-        }
-        body.dark-mode .blog-post .content code,
-        body.dark-mode .blog-post .content pre {
-            background: #0a0a0a;
-            color: #e0e0e0;
-        }
-        body.dark-mode .blog-post .content blockquote {
-            background: rgba(255,255,255,0.03);
-            border-left: 4px solid #b0b0b0;
-            color: #e0e0e0;
-        }
-        body.dark-mode .back-link {
-            background: rgba(176, 176, 176, 0.1);
-            border: 1px solid rgba(176, 176, 176, 0.2);
-            color: #b0b0b0;
-        }
-        body.dark-mode .back-link:hover {
-            background: rgba(176, 176, 176, 0.15);
-            border-color: rgba(176, 176, 176, 0.3);
-            color: #ffffff;
+            line-height: 1.6;
         }
 
         .header {
             width: 100%;
-            height: 180px;
-            background: 
-                linear-gradient(45deg, rgba(0,0,0,0.3) 0%, transparent 50%, rgba(0,0,0,0.3) 100%),
-                url('images/leather.png');
-            background-size: 100% auto;
-            background-position: center bottom;
-            background-repeat: no-repeat;
+            height: 80px;
+            background: #1a1a1a;
             position: relative;
             z-index: 200;
-            box-shadow: 
-                0 2px 4px rgba(0,0,0,0.3),
-                inset 0 1px 1px rgba(255,255,255,0.1);
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
-            padding-top: 15px;
-            overflow: visible;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg,
-                rgba(255,255,255,0.1) 0%,
-                transparent 20%,
-                rgba(0,0,0,0.1) 50%,
-                transparent 80%,
-                rgba(255,255,255,0.1) 100%
-            );
-            pointer-events: none;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            margin-top: 0;
         }
 
         .name {
             font-family: Georgia, serif;
-            font-size: 4rem;
-            color: transparent;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative;
-            text-shadow: 
-                0 1px 0 rgba(255,255,255,0.05),
-                0 2px 0 rgba(0,0,0,0.2),
-                0 3px 0 rgba(0,0,0,0.2);
-            background: linear-gradient(
-                45deg,
-                #c4a77d 0%,
-                #d4b483 50%,
-                #c4a77d 100%
-            );
-            -webkit-background-clip: text;
-            background-clip: text;
-            filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
-            opacity: 0.9;
-            margin-bottom: 0.1rem;
-            margin-top: 1.2rem;
-        }
-
-        .subheader {
-            font-family: Georgia, serif;
-            font-size: 1.5rem;
-            color: #d4b483;
-            letter-spacing: 1px;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-            text-align: center;
-            margin-top: 0;
-        }
-
-        .subheader span {
-            margin: 0 0.5rem;
-            color: #c4a77d;
+            font-size: 2rem;
+            color: #e0e0e0;
+            text-transform: lowercase;
+            letter-spacing: 0.5px;
+            margin: 0;
+            font-weight: normal;
         }
 
         .notebook-page {
             margin-left: auto;
             margin-right: auto;
             min-height: 100vh;
-            background: #f7e8d0;
+            background: #1a1a1a;
             position: relative;
-            box-shadow: 
-                0 0 0 1px #e8e0d0,
-                0 0 0 2px #d4c8b0,
-                0 0 0 3px #c0b090,
-                0 0 0 4px #ac9870,
-                0 0 0 5px #988050,
-                0 0 0 6px #846830,
-                0 0 0 7px #705010,
-                0 0 0 8px #5c3800,
-                0 0 0 9px #482000,
-                0 0 0 10px #340800,
-                0 0 0 11px #200000,
-                0 0 0 12px #0c0000,
-                0 0 20px rgba(0, 0, 0, 0.5);
             box-sizing: border-box;
-            padding: 40px 80px;
+            padding: 40px 20px;
             flex: 1;
             margin-bottom: 0;
-            padding-bottom: 40px;
-            padding-top: 10px;
-        }
-
-        .notebook-page::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
-            opacity: 0.4;
-            mix-blend-mode: overlay;
-            pointer-events: none;
-        }
-
-        .notebook-page::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
-            opacity: 0.35;
-            mix-blend-mode: overlay;
-            pointer-events: none;
+            max-width: 600px;
+            width: 100%;
         }
 
         .section {
-            max-width: 900px;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 1.5rem 0;
+            padding: 1rem 0;
         }
 
         .section-title {
             font-family: Georgia, serif;
-            font-size: 2.5rem;
-            color: #1a0f0a;
-            margin: 1.5rem 0;
+            font-size: 1.5rem;
+            color: #e0e0e0;
+            margin: 2rem 0 1rem;
             font-weight: normal;
-            letter-spacing: 1px;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100px;
-            height: 2px;
-            background: #8c7a6a;
+            letter-spacing: 0.5px;
+            text-transform: lowercase;
         }
 
         .project-card {
-            display: flex;
-            gap: 1.5rem;
-            padding: 1.5rem;
-            background: #f7e8d0;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            max-width: 900px;
-            margin: 0 auto 1.5rem;
-        }
-
-        .project-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .project-image {
-            width: 180px;
-            height: 120px;
-            border-radius: 4px;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-
-        .project-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
         .project-title {
             font-family: Georgia, serif;
-            font-size: 1.5rem;
-            color: #2c1810;
+            font-size: 1.1rem;
+            color: #e0e0e0;
             margin: 0;
             font-weight: normal;
-        }
-
-        .project-tech {
-            font-family: Georgia, serif;
-            font-size: 0.9rem;
-            color: #8b4513;
-            margin: 0;
-            font-style: italic;
-        }
-
-        .project-description {
-            font-family: Georgia, serif;
-            font-size: 1rem;
-            color: #4a4a4a;
-            line-height: 1.5;
-            margin: 0;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 0.5rem;
+            text-transform: lowercase;
         }
 
         .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #8b4513;
+            color: #999;
             text-decoration: none;
             font-family: Georgia, serif;
             font-size: 0.9rem;
-            transition: color 0.3s ease;
         }
 
         .project-link:hover {
-            color: #2c1810;
+            color: #e0e0e0;
         }
 
-        .blog-preview {
-            display: block;
-            text-decoration: none;
-            padding: 1.5rem;
-            background: #f7e8d0;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            max-width: 900px;
-            margin: 0 auto 1.5rem;
-        }
-
-        .blog-preview:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .blog-title {
-            font-family: Georgia, serif;
-            font-size: 1.5rem;
-            color: #2c1810;
-            margin: 0 0 0.75rem 0;
-        }
-
-        .blog-preview-text {
-            font-family: Georgia, serif;
-            font-size: 1rem;
-            color: #4a4a4a;
-            line-height: 1.5;
-            margin: 0 0 0.75rem 0;
+        .blog-card {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
         .blog-date {
             font-family: Georgia, serif;
-            font-size: 0.9rem;
-            color: #8b4513;
-            font-style: italic;
+            font-size: 0.8rem;
+            color: #999;
             margin: 0;
-        }
-
-        /* Blog post styles */
-        .blog-post {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            background: #f7e8d0;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            font-family: Georgia, serif;
-            color: #2c1810;
-            line-height: 1.8;
-        }
-
-        .blog-post h1 {
-            font-family: Georgia, serif;
-            font-size: 2.5rem;
-            color: #2c1810;
-            margin: 0 0 1rem 0;
-            font-weight: normal;
-            letter-spacing: 0.5px;
-            text-shadow: 0 1px 0 rgba(255,255,255,0.1);
-        }
-
-        .blog-post .date {
-            font-family: Georgia, serif;
-            font-size: 0.9rem;
-            color: #8b4513;
             font-style: italic;
-            margin-bottom: 2rem;
         }
 
-        .blog-post .content {
+        .blog-post {
+            display: none;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1rem 0;
+        }
+
+        .blog-post.active {
+            display: block;
+        }
+
+        .blog-post-title {
             font-family: Georgia, serif;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #2c1810;
+            font-size: 1.8rem;
+            color: #e0e0e0;
+            margin: 0 0 0.5rem 0;
+            font-weight: normal;
+            text-transform: lowercase;
         }
 
-        .blog-post .content p {
+        .blog-post-content {
+            font-family: Georgia, serif;
+            font-size: 1rem;
+            color: #b0b0b0;
+            line-height: 1.8;
+        }
+
+        .blog-post-content p {
             margin-bottom: 1.5rem;
         }
 
-        .blog-post .content h2 {
-            font-family: Georgia, serif;
-            font-size: 1.8rem;
-            color: #2c1810;
-            margin: 2rem 0 1rem 0;
-            font-weight: normal;
-            letter-spacing: 0.5px;
-            text-shadow: 0 1px 0 rgba(255,255,255,0.1);
-        }
-
-        .blog-post .content h3 {
-            font-family: Georgia, serif;
-            font-size: 1.4rem;
-            color: #2c1810;
-            margin: 1.5rem 0 1rem 0;
-            font-weight: normal;
-            letter-spacing: 0.5px;
-            text-shadow: 0 1px 0 rgba(255,255,255,0.1);
-        }
-
-        .blog-post .content ul, 
-        .blog-post .content ol {
-            margin: 1rem 0;
-            padding-left: 2rem;
-            color: #2c1810;
-        }
-
-        .blog-post .content li {
-            margin-bottom: 0.5rem;
-        }
-
-        .blog-post .content blockquote {
-            margin: 1.5rem 0;
-            padding: 1rem 1.5rem;
-            border-left: 4px solid #8b4513;
-            background: rgba(139, 69, 19, 0.05);
-            font-style: italic;
-            color: #2c1810;
-        }
-
-        .blog-post .content code {
-            font-family: 'Courier New', Courier, monospace;
-            background: rgba(139, 69, 19, 0.1);
-            padding: 0.2rem 0.4rem;
-            border-radius: 3px;
-            font-size: 0.9em;
-            color: #2c1810;
-        }
-
-        .blog-post .content pre {
-            background: rgba(139, 69, 19, 0.1);
-            padding: 1rem;
-            border-radius: 4px;
-            overflow-x: auto;
-            margin: 1.5rem 0;
-            border: 1px solid rgba(139, 69, 19, 0.2);
-        }
-
-        .blog-post .content pre code {
-            background: none;
-            padding: 0;
-        }
-
-        .blog-post .content img {
-            max-width: 100%;
-            border-radius: 4px;
-            margin: 1.5rem 0;
-            box-shadow: 
-                0 2px 4px rgba(0, 0, 0, 0.1),
-                0 0 0 1px rgba(139, 69, 19, 0.1);
-        }
-
-        .blog-post .content a {
-            color: #8b4513;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .blog-post .content a:hover {
-            color: #2c1810;
-            border-bottom-color: #8b4513;
-        }
-
-        .blog-post .content hr {
-            border: none;
-            border-top: 1px solid rgba(139, 69, 19, 0.2);
-            margin: 2rem 0;
-        }
-
         .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #8b4513;
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #999;
             text-decoration: none;
             font-family: Georgia, serif;
-            font-size: 1rem;
-            margin-bottom: 2rem;
-            transition: all 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            background: rgba(139, 69, 19, 0.05);
-            border: 1px solid rgba(139, 69, 19, 0.1);
+            font-size: 0.9rem;
         }
 
         .back-link:hover {
-            color: #2c1810;
-            background: rgba(139, 69, 19, 0.1);
-            border-color: rgba(139, 69, 19, 0.2);
+            color: #e0e0e0;
         }
 
-        .hidden {
-            display: none;
-        }
-
-        /* Contact section styles */
-        .contact-section {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 4rem 0;
-        }
-
-        .contact-section p {
-            font-size: 1.2rem;
-            color: #4a4a4a;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-        }
-
-        .contact-links a {
-            position: relative;
-            display: block;
-            width: 180px;
-            text-decoration: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .contact-links a:hover img {
-            transform: scale(1.05) rotate(2deg);
-        }
-
-        .contact-links img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: contain;
-            transition: transform 0.2s ease;
-        }
-
-        .contact-links span {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            padding: 8px 16px;
-            font-family: 'Fredoka One', cursive;
-            font-size: 1.8rem;
-            font-weight: normal;
-            text-transform: none;
-            letter-spacing: 0.5px;
-            -webkit-text-stroke: 1.4px black;
-            text-stroke: 1.4px black;
-            text-shadow: 
-                0 0 4px rgba(0,0,0,0.5),
-                0 0 8px rgba(0,0,0,0.3);
-        }
-
-        /* Remove individual font styles since we're using the same font for all */
-        .contact-links a:nth-child(1) span,
-        .contact-links a:nth-child(2) span,
-        .contact-links a:nth-child(3) span {
-            font-family: 'Fredoka One', cursive;
-            transform: translate(-50%, -50%);
-            font-size: 1.8rem;
-        }
-
-        .view-all-link {
-            display: inline-block;
-            color: #8b4513;
-            text-decoration: none;
+        .about-content {
             font-family: Georgia, serif;
-            font-size: 1.1rem;
-            margin-top: 1rem;
-            transition: color 0.3s ease;
+            font-size: 1rem;
+            color: #b0b0b0;
+            line-height: 1.6;
         }
 
-        .view-all-link:hover {
-            color: #2c1810;
+        .about-content p {
+            margin-bottom: 1rem;
         }
 
-        /* Lamp pull string styles */
-        .lamp-pull {
-            position: absolute;
-            right: 60px;
-            top: 80px;
-            width: 59px;
-            height: 329px;
-            z-index: 1;
-            cursor: pointer;
-            user-select: none;
-        }
-        @keyframes pullAnimation {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(30px); }
-            100% { transform: translateY(0); }
-        }
-        .lamp-pull.pulling {
-            animation: pullAnimation 0.2s ease-in-out;
+        .footer {
+            text-align: center;
+            padding: 0.8rem 0;
+            background: #1a1a1a;
+            font-family: Georgia, serif;
+            color: #999;
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* Dark mode lamp pull feathering */
-        body.dark-mode .lamp-pull {
-            filter: brightness(0.8) contrast(1.2) drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
-        }
-
-        /* Mobile-friendly styles */
         @media screen and (max-width: 768px) {
             .notebook-page {
                 padding: 20px;
             }
 
             .header {
-                height: 100px;
-                padding-top: 0;
+                height: 60px;
             }
 
             .name {
-                font-size: 2.5rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .project-card {
-                flex-direction: column;
-                padding: 1rem;
-            }
-
-            .project-image {
-                width: 100%;
-                height: 200px;
-                margin-bottom: 1rem;
-            }
-
-            .project-title {
-                font-size: 1.3rem;
-            }
-
-            .section {
-                padding: 0;
-            }
-
-            .blog-preview {
-                padding: 1rem;
-            }
-
-            .blog-title {
-                font-size: 1.3rem;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .lamp-pull {
-                right: 20px;
-                top: 40px;
-                width: 40px;
-                height: 220px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .notebook-page {
-                padding: 15px;
-            }
-
-            .header {
-                height: 100px;
-                padding-top: 0;
-            }
-
-            .name {
-                font-size: 2rem;
-            }
-
-            .section-title {
                 font-size: 1.8rem;
             }
 
-            .section {
-                padding: 0;
-            }
-
-            .project-image {
-                height: 160px;
-            }
-
-            .project-title {
-                font-size: 1.2rem;
-            }
-
-            .blog-title {
-                font-size: 1.2rem;
-            }
-
-            .lamp-pull {
-                right: 15px;
-                top: 30px;
-                width: 30px;
-                height: 165px;
+            .section-title {
+                font-size: 1.3rem;
             }
         }
 
-        /* Ensure images are responsive */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Make sure the notebook page doesn't overflow on mobile */
-        .notebook-page {
-            width: 100%;
-            box-sizing: border-box;
-            overflow-x: hidden;
-        }
-
-        /* Adjust blog post content for mobile */
-        @media screen and (max-width: 768px) {
-            .blog-post {
-                padding: 1rem;
-            }
-
-            .blog-post h1 {
-                font-size: 2rem;
-            }
-
-            .blog-post .content {
-                font-size: 1rem;
-            }
-
-            .blog-post .content h2 {
-                font-size: 1.5rem;
-            }
-
-            .blog-post .content h3 {
-                font-size: 1.2rem;
-            }
-
-            .blog-post .content pre {
-                padding: 0.5rem;
-                font-size: 0.9rem;
-            }
-        }
-
-        /* Optimize transitions */
-        .project-card,
-        .blog-preview,
-        .project-link,
-        .view-all-link,
-        .back-link,
-        .contact-links a {
-            transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
-        }
-
-        /* Remove redundant transitions */
-        .blog-post .content a,
-        .project-link,
-        .view-all-link {
-            transition: color 0.2s ease;
-        }
-
-        /* Remove all individual transitions and replace with a single one */
-        * {
-            transition: none !important;
-        }
-
-        /* Only keep essential transitions */
-        .project-card:hover,
-        .blog-preview:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Pull string animation */
-        @keyframes pullAnimation {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(30px); }
-            100% { transform: translateY(0); }
-        }
-        .lamp-pull.pulling {
-            animation: pullAnimation 0.2s ease-in-out;
-        }
-
-        /* Add styles for about section */
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            font-family: Georgia, serif;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #4a4a4a;
-        }
-
-        .about-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .about-content p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Footer styles */
-        .footer {
-            text-align: center;
-            padding: 0.8rem 0;
-            background: #f3d8b5;
-            font-family: Georgia, serif;
-            color: #2c1810;
-            font-size: 0.8rem;
-            opacity: 0.98;
-            margin: 0;
-            border: none;
+        .ticker-container {
+            width: 100vw;
+            overflow: hidden;
+            background: #111;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            height: 32px;
             position: relative;
-            z-index: 1;
-            box-shadow: 0 -1px 0 rgba(0,0,0,0.05);
-        }
-
-        .footer p {
-            margin: 0;
-        }
-
-        body.dark-mode .footer {
-            background: #1a1a1a;
-            color: #e0d0b0;
-            box-shadow: 0 -1px 0 rgba(255,255,255,0.05);
-        }
-
-        /* Navigation styles */
-        .nav-slips {
+            z-index: 9999;
             display: flex;
-            gap: 2.5rem;
-            margin-top: 2rem;
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 201;
+            align-items: center;
         }
-
-        .nav-slip {
-            background: #fff9f0;
-            padding: 0.8rem 1.8rem;
-            border-radius: 4px;
-            text-decoration: none;
-            color: #2c1810;
-            font-family: 'Gloria Hallelujah', cursive;
-            font-size: 1rem;
-            transform: rotate(-1deg);
-            box-shadow: 
-                0 3px 6px rgba(0,0,0,0.15),
-                0 0 0 1px rgba(0,0,0,0.08),
-                0 2px 4px rgba(0,0,0,0.12);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            position: relative;
+        .ticker-wrapper {
+            display: inline-flex;
             white-space: nowrap;
-            background-image: url('images/notebook-paper.jpg');
-            background-size: 200% auto;
-            background-repeat: repeat;
-            text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
-            letter-spacing: 0.5px;
-            background-position: 0% 0%;
+            animation: ticker-scroll 20s linear infinite;
         }
-
-        .nav-slip:nth-child(2) { 
-            transform: rotate(1deg);
-            background-color: transparent;
-            background-position: 25% 25%;
-        }
-        .nav-slip:nth-child(3) { 
-            transform: rotate(-0.5deg);
-            background-color: transparent;
-            background-position: 75% 75%;
-        }
-        .nav-slip:nth-child(4) { 
-            transform: rotate(0.5deg);
-            background-color: transparent;
-            background-position: 50% 50%;
-        }
-
-        .nav-slip:hover {
-            transform: rotate(0) translateY(-4px);
-            box-shadow: 
-                0 6px 12px rgba(0,0,0,0.2),
-                0 0 0 1px rgba(0,0,0,0.1),
-                0 3px 6px rgba(0,0,0,0.15);
-        }
-
-        .nav-slip::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, 
-                rgba(255,255,255,0.5) 0%,
-                transparent 50%,
-                rgba(0,0,0,0.1) 100%);
-            pointer-events: none;
-            border-radius: 4px;
-            mix-blend-mode: overlay;
-        }
-
-        body.dark-mode .nav-slip {
+        .ticker-text {
+            display: inline-block;
+            font-family: Georgia, serif;
+            font-size: 1rem;
             color: #e0e0e0;
-            box-shadow: 
-                0 3px 6px rgba(0,0,0,0.4),
-                0 0 0 1px rgba(255,255,255,0.08),
-                0 2px 4px rgba(0,0,0,0.3);
-            background-image: url('images/notebook-paper.jpg');
-            background-size: 200% auto;
-            background-repeat: repeat;
-            filter: brightness(0.7) contrast(1.2);
-            text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+            padding-right: 50px;
+        }
+        @keyframes ticker-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
-        body.dark-mode .nav-slip:nth-child(2) { background-color: transparent; }
-        body.dark-mode .nav-slip:nth-child(3) { background-color: transparent; }
-        body.dark-mode .nav-slip:nth-child(4) { background-color: transparent; }
-
-        body.dark-mode .nav-slip:hover {
-            box-shadow: 
-                0 4px 8px rgba(0,0,0,0.4),
-                0 0 0 1px rgba(255,255,255,0.1),
-                0 2px 4px rgba(0,0,0,0.2);
+        .stock-ticker-container {
+            width: 100vw;
+            overflow: hidden;
+            background: #181818;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            height: 32px;
+            position: relative;
+            z-index: 9998;
+            display: flex;
+            align-items: center;
         }
-
-        @media screen and (max-width: 768px) {
-            .nav-slips {
-                gap: 1.5rem;
-                flex-wrap: wrap;
-                justify-content: center;
-                bottom: -45px;
-            }
-
-            .nav-slip {
-                font-size: 1.1rem;
-                padding: 0.8rem 1.5rem;
-            }
+        .stock-ticker-wrapper {
+            display: flex;
+            white-space: nowrap;
+            animation: stock-ticker-scroll 45s linear infinite;
+        }
+        .stock-ticker-text {
+            display: inline-block;
+            font-family: Georgia, serif;
+            font-size: 1rem;
+            color: #e0e0e0;
+            letter-spacing: 2px;
+            padding-right: 50px;
+        }
+        @keyframes stock-ticker-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .stock-up {
+            color: #4caf50;
+            font-weight: bold;
+        }
+        .stock-down {
+            color: #e53935;
+            font-weight: bold;
+        }
+        .arrow {
+            font-size: 1.2rem;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1 class="name">Will Garrett</h1>
-        <div class="subheader">cs @ uiuc <span>•</span> building @ founders</div>
-        <div class="nav-slips">
-            <a href="#/" class="nav-slip">Projects</a>
-            <a href="#/blog" class="nav-slip">Blog</a>
-            <a href="#/" data-section="about" class="nav-slip">About</a>
-            <a href="#/" data-section="contact" class="nav-slip">Contact</a>
+        <h1 class="name">will garrett</h1>
+    </div>
+    <div class="ticker-container">
+        <div class="ticker-wrapper">
+            <div class="ticker-text">WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT </div>
+            <div class="ticker-text">WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT WILL GARRETT </div>
         </div>
     </div>
-    <img src="images/lamp-pull.png" alt="Pull string to toggle dark mode" class="lamp-pull" id="lamp-pull" loading="eager">
+    <div class="stock-ticker-container">
+        <div class="stock-ticker-wrapper">
+            <div class="stock-ticker-text">
+                <span class="stock-up">productivity <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">negativity <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">entrepreneurship <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-up">curiosity <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">procrastination <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">learning <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">doubt <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">innovation <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">fear <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">creativity <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">laziness <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">motivation <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">anxiety <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">focus <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">distraction <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">problem-solving <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">impatience <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">collaboration <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">isolation <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">adaptability <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">rigidity <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">optimism <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">cynicism <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">persistence <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">giving up <span class="arrow">▼</span></span> &nbsp; 
+            </div>
+            <div class="stock-ticker-text">
+                <span class="stock-up">productivity <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">negativity <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">entrepreneurship <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-up">curiosity <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">procrastination <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">learning <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">doubt <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">innovation <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">fear <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">creativity <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">laziness <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">motivation <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">anxiety <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">focus <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">distraction <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">problem-solving <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">impatience <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">collaboration <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">isolation <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">adaptability <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">rigidity <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">optimism <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">cynicism <span class="arrow">▼</span></span> &nbsp; 
+                <span class="stock-up">persistence <span class="arrow">▲</span></span> &nbsp; 
+                <span class="stock-down">giving up <span class="arrow">▼</span></span> &nbsp; 
+            </div>
+        </div>
+    </div>
 
-    <!-- Homepage Content -->
     <div id="homepage" class="notebook-page">
-        <!-- Projects Section -->
         <section id="projects" class="section">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">projects</h2>
             <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="AI Image Generator" class="project-image" loading="lazy">
-                <div class="project-content">
-                    <h3 class="project-title">AI Image Generator</h3>
-                    <p class="project-tech">Python • TensorFlow • React • FastAPI</p>
-                    <p class="project-description">A web application that generates unique images using machine learning. Features include style transfer, custom training, and real-time generation.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/ai-image-generator" class="project-link" target="_blank">GitHub</a>
-                        <a href="https://ai-image-generator-demo.com" class="project-link" target="_blank">Live Demo</a>
-                    </div>
-                </div>
+                <a href="https://github.com/yourusername/ai-image-generator" class="project-link" target="_blank">ai image generator</a>
             </div>
-
             <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Personal Finance Tracker" class="project-image" loading="lazy">
-                <div class="project-content">
-                    <h3 class="project-title">Personal Finance Tracker</h3>
-                    <p class="project-tech">React • Node.js • MongoDB • Express</p>
-                    <p class="project-description">A full-stack application for tracking expenses, investments, and financial goals. Includes data visualization and budget planning features.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/finance-tracker" class="project-link" target="_blank">GitHub</a>
-                        <a href="https://finance-tracker-demo.com" class="project-link" target="_blank">Live Demo</a>
-                    </div>
-                </div>
+                <a href="https://github.com/yourusername/finance-tracker" class="project-link" target="_blank">personal finance tracker</a>
             </div>
-
             <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Smart Home Dashboard" class="project-image" loading="lazy">
-                <div class="project-content">
-                    <h3 class="project-title">Smart Home Dashboard</h3>
-                    <p class="project-tech">Python • Raspberry Pi • IoT • MQTT</p>
-                    <p class="project-description">A centralized dashboard for controlling smart home devices. Features include voice control, automation rules, and energy usage monitoring.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/smart-home-dashboard" class="project-link" target="_blank">GitHub</a>
-                        <a href="https://smart-home-docs.com" class="project-link" target="_blank">Documentation</a>
-                    </div>
-                </div>
+                <a href="https://github.com/yourusername/smart-home-dashboard" class="project-link" target="_blank">smart home dashboard</a>
             </div>
         </section>
 
-        <!-- Latest Blog Posts Section -->
-        <section id="latest-blog" class="section">
-            <h2 class="section-title">Latest Posts</h2>
-            <div id="latest-blog-list">
-                <!-- Latest blog posts will be loaded here -->
+        <section id="blog" class="section">
+            <h2 class="section-title">blog</h2>
+            <div class="blog-card">
+                <a href="#/blog/1" class="project-link">building a personal website</a>
+                <p class="blog-date">march 2024</p>
             </div>
-            <a href="#/blog" class="view-all-link">View All Posts →</a>
+            <div class="blog-card">
+                <a href="#/blog/2" class="project-link">learning rust in 2024</a>
+                <p class="blog-date">february 2024</p>
+            </div>
+            <div class="blog-card">
+                <a href="#/blog/3" class="project-link">thoughts on ai development</a>
+                <p class="blog-date">january 2024</p>
+            </div>
         </section>
 
-        <!-- About Section -->
+        <div id="blog-post-1" class="blog-post">
+            <a href="#/" class="back-link">← back to all posts</a>
+            <h1 class="blog-post-title">building a personal website</h1>
+            <p class="blog-date">march 2024</p>
+            <div class="blog-post-content">
+                <p>Building a personal website is a journey of self-expression and technical exploration. In this post, I'll share my experience creating this minimal, content-focused site.</p>
+                <p>The decision to go minimal wasn't just about aesthetics—it was about focusing on what matters most: the content. By stripping away unnecessary elements, we create a space where ideas can breathe and readers can focus.</p>
+                <p>Georgia font, with its timeless elegance, provides the perfect balance of readability and personality. The dark theme reduces eye strain while maintaining a sophisticated look.</p>
+                <p>What's your experience with personal websites? Do you prefer minimal designs or more elaborate layouts?</p>
+            </div>
+        </div>
+
+        <div id="blog-post-2" class="blog-post">
+            <a href="#/" class="back-link">← back to all posts</a>
+            <h1 class="blog-post-title">learning rust in 2024</h1>
+            <p class="blog-date">february 2024</p>
+            <div class="blog-post-content">
+                <p>Rust has been gaining significant traction in the programming world, and 2024 seems like the perfect time to dive in. Its focus on memory safety without sacrificing performance makes it an attractive choice for systems programming.</p>
+                <p>The learning curve is steep, but the rewards are substantial. The compiler's helpful error messages and the strong type system help catch issues early in development.</p>
+                <p>In this post, I'll share my journey learning Rust, from basic concepts to more advanced features. Whether you're a systems programmer or a web developer, Rust has something to offer.</p>
+            </div>
+        </div>
+
+        <div id="blog-post-3" class="blog-post">
+            <a href="#/" class="back-link">← back to all posts</a>
+            <h1 class="blog-post-title">thoughts on ai development</h1>
+            <p class="blog-date">january 2024</p>
+            <div class="blog-post-content">
+                <p>The field of artificial intelligence is evolving at an unprecedented pace. As developers, we're witnessing a revolution in how we build and interact with software.</p>
+                <p>Large language models and generative AI are changing the landscape of software development. But with great power comes great responsibility. We need to consider the ethical implications of our work.</p>
+                <p>In this post, I'll explore the current state of AI development, its challenges, and its potential impact on the future of software engineering.</p>
+            </div>
+        </div>
+
         <section id="about" class="section">
-            <h2 class="section-title">About</h2>
+            <h2 class="section-title">about</h2>
             <div class="about-content">
                 <p>I'm a Computer Science student at UIUC passionate about building innovative solutions. Currently working on exciting projects at Founders, where I combine technical expertise with entrepreneurial thinking to create impactful products.</p>
                 <p>When I'm not coding or building, you can find me exploring new technologies, contributing to open-source projects, or sharing my thoughts on software development and entrepreneurship.</p>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="section">
-            <div class="contact-section">
-                <h2 class="section-title">Get in Touch</h2>
+            <h2 class="section-title">contact</h2>
+            <div class="about-content">
                 <p>I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
-                <div class="contact-links">
-                    <a href="mailto:your.email@example.com">
-                        <img src="images/envelope.png" alt="Email">
-                        <span>Email</span>
-                    </a>
-                    <a href="https://github.com/yourusername">
-                        <img src="images/hammer-wrench.png" alt="GitHub">
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://linkedin.com/in/yourusername">
-                        <img src="images/mug.png" alt="LinkedIn">
-                        <span>LinkedIn</span>
-                    </a>
+                <div class="project-links">
+                    <a href="mailto:your.email@example.com" class="project-link">email</a>
+                    <a href="https://github.com/yourusername" class="project-link">github</a>
+                    <a href="https://linkedin.com/in/yourusername" class="project-link">linkedin</a>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- Blog List Page -->
-    <div id="blog-list-page" class="notebook-page" style="display: none;">
-        <a href="#/" class="back-link">← Back to Home</a>
-        <section class="section">
-            <h2 class="section-title">Blog</h2>
-            <div id="blog-list">
-                <!-- All blog posts will be loaded here -->
-            </div>
-        </section>
-    </div>
-
-    <!-- Blog Post Page -->
-    <div id="blog-post-page" class="notebook-page" style="display: none;">
-        <a href="#/blog" class="back-link">← Back to Blog</a>
-        <div id="blog-post-content" class="blog-post">
-            <!-- Blog post content will be loaded here -->
-        </div>
-    </div>
-
     <footer class="footer">
-        <p>© <span id="current-year"></span> Will Garrett • (no actual copyright, but don't steal!)</p>
+        <p>© <span id="current-year"></span> will garrett</p>
     </footer>
 
     <script>
-        // Set current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Simplified router
-        const router = {
-            init() {
-                // Handle navigation clicks
-                document.querySelectorAll('.nav-slip').forEach(link => {
-                    link.addEventListener('click', (e) => {
-                        const section = link.getAttribute('data-section');
-                        if (section) {
-                            e.preventDefault();
-                            window.location.hash = '/';
-                            setTimeout(() => {
-                                const targetSection = document.getElementById(section);
-                                if (targetSection) {
-                                    targetSection.scrollIntoView({ behavior: 'smooth' });
-                                }
-                            }, 100);
-                        }
-                    });
-                });
+        // Simple router for blog posts
+        function handleRoute() {
+            const hash = window.location.hash;
+            const homepage = document.getElementById('homepage');
+            const sections = homepage.querySelectorAll('.section');
+            const blogPosts = document.querySelectorAll('.blog-post');
 
-                window.addEventListener('hashchange', () => {
-                    const hash = window.location.hash.slice(1) || '/';
-                    const blogPostMatch = hash.match(/^\/blog\/(.+)$/);
-                    
-                    document.getElementById('homepage').style.display = hash === '/' ? 'block' : 'none';
-                    document.getElementById('blog-list-page').style.display = hash === '/blog' ? 'block' : 'none';
-                    document.getElementById('blog-post-page').style.display = blogPostMatch ? 'block' : 'none';
-                    
-                    if (hash === '/') loadLatestBlogPosts();
-                    else if (hash === '/blog') loadAllBlogPosts();
-                    else if (blogPostMatch) loadBlogPost(blogPostMatch[1]);
-                });
-                window.dispatchEvent(new Event('hashchange'));
-            }
-        };
+            // Hide all blog posts
+            blogPosts.forEach(post => post.classList.remove('active'));
 
-        // Simplified blog loading functions
-        async function loadLatestBlogPosts() {
-            try {
-                const posts = await (await fetch('/api/blog/posts')).json();
-                document.getElementById('latest-blog-list').innerHTML = posts.slice(0, 3).map(post => `
-                    <a href="#/blog/${post.id}" class="blog-preview">
-                        <h3 class="blog-title">${post.title}</h3>
-                        <p class="blog-preview-text">${post.excerpt}</p>
-                        <p class="blog-date">${post.date}</p>
-                    </a>
-                `).join('');
-            } catch {
-                document.getElementById('latest-blog-list').innerHTML = '<p>Error loading posts</p>';
+            if (hash.startsWith('#/blog/')) {
+                const postId = hash.split('/').pop();
+                const post = document.getElementById(`blog-post-${postId}`);
+                if (post) {
+                    // Hide all sections
+                    sections.forEach(section => section.style.display = 'none');
+                    // Show the blog post
+                    post.classList.add('active');
+                }
+            } else {
+                // Show all sections
+                sections.forEach(section => section.style.display = 'block');
             }
         }
 
-        async function loadAllBlogPosts() {
-            try {
-                const posts = await (await fetch('/api/blog/posts')).json();
-                document.getElementById('blog-list').innerHTML = posts.map(post => `
-                    <a href="#/blog/${post.id}" class="blog-preview">
-                        <h3 class="blog-title">${post.title}</h3>
-                        <p class="blog-preview-text">${post.excerpt}</p>
-                        <p class="blog-date">${post.date}</p>
-                    </a>
-                `).join('');
-            } catch {
-                document.getElementById('blog-list').innerHTML = '<p>Error loading posts</p>';
-            }
-        }
+        // Handle initial route
+        handleRoute();
 
-        async function loadBlogPost(postId) {
-            try {
-                const data = await (await fetch(`/api/blog/posts/${postId}`)).json();
-                document.getElementById('blog-post-content').innerHTML = data.error ? 
-                    `<p>Error: ${data.error}</p>` : data.html;
-            } catch {
-                document.getElementById('blog-post-content').innerHTML = '<p>Error loading post</p>';
-            }
-        }
-
-        // Simplified dark mode toggle
-        document.getElementById('lamp-pull').onclick = function() {
-            this.classList.add('pulling');
-            document.body.classList.toggle('dark-mode');
-            this.addEventListener('animationend', () => this.classList.remove('pulling'), { once: true });
-        };
-
-        // Initialize
-        router.init();
+        // Listen for hash changes
+        window.addEventListener('hashchange', handleRoute);
     </script>
 </body>
 </html> 
