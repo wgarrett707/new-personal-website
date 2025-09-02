@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail - will garrett</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .detail-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            min-height: 100vh;
+            background: #ffffff;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: translateX(-4px);
+        }
+
+        .back-button svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .detail-header {
+            margin-bottom: 40px;
+        }
+
+        .detail-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .detail-meta {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 32px;
+        }
+
+        .detail-content {
+            line-height: 1.7;
+            color: #1a1a1a;
+        }
+
+        .detail-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 32px 0 16px 0;
+            color: #1a1a1a;
+        }
+
+        .detail-content h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin: 24px 0 12px 0;
+            color: #1a1a1a;
+        }
+
+        .detail-content p {
+            margin-bottom: 16px;
+            color: #6c757d;
+        }
+
+        .detail-content ul, .detail-content ol {
+            margin: 16px 0;
+            padding-left: 24px;
+            color: #6c757d;
+        }
+
+        .detail-content li {
+            margin-bottom: 8px;
+        }
+
+        .detail-content code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #1a1a1a;
+        }
+
+        .detail-content pre {
+            background: #f8f9fa;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+
+        .detail-content pre code {
+            background: none;
+            padding: 0;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 24px 0;
+        }
+
+        .tech-tag {
+            background: #f8f9fa;
+            color: #495057;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid #e9ecef;
+        }
+
+        @media (max-width: 768px) {
+            .detail-container {
+                padding: 24px 16px;
+            }
+            
+            .detail-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="detail-container">
+        <a href="index.html" class="back-button">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+            </svg>
+            Back to Portfolio
+        </a>
+
+        <div class="detail-header">
+            <h1 class="detail-title">Project Title</h1>
+        </div>
+
+        <div class="detail-content">
+            <p>Brief project description goes here.</p>
+
+            <h2>Overview</h2>
+            <p>What the project does and why it was built.</p>
+
+            <h2>Technologies</h2>
+            <div class="tech-stack">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+            </div>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
