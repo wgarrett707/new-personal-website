@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EIU Academic Challenge - will garrett</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .detail-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            min-height: 100vh;
+            background: #ffffff;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: translateX(-4px);
+        }
+
+        .back-button svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .detail-header {
+            margin-bottom: 40px;
+        }
+
+        .detail-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .detail-content {
+            line-height: 1.7;
+            color: #1a1a1a;
+        }
+
+        .detail-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 32px 0 16px 0;
+            color: #1a1a1a;
+        }
+
+        .detail-content p {
+            margin-bottom: 16px;
+            color: #6c757d;
+        }
+
+        .detail-content ul {
+            margin: 16px 0;
+            padding-left: 24px;
+            color: #6c757d;
+        }
+
+        .detail-content li {
+            margin-bottom: 8px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 24px 0;
+        }
+
+        .tech-tag {
+            background: #f8f9fa;
+            color: #495057;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid #e9ecef;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .action-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: #1a1a1a;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 1px solid #1a1a1a;
+        }
+
+        .action-button:hover {
+            background: #ffffff;
+            color: #1a1a1a;
+            transform: translateY(-2px);
+        }
+
+        .action-button svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .detail-container {
+                padding: 24px 16px;
+            }
+            
+            .detail-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="detail-container">
+        <a href="../index.html" class="back-button">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+            </svg>
+            Back to Portfolio
+        </a>
+
+        <div class="detail-header">
+            <h1 class="detail-title">EIU Academic Challenge</h1>
+            <div class="action-buttons">
+                <a href="https://castle.eiu.edu/academic_challenge/archive/2022_Regional_CompSci_Exam.pdf" class="action-button">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                    </svg>
+                    View Exam
+                </a>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <p>Partook in an exam-style competition in the "Computer Science" division and placed first in my region.</p>
+
+            <h2>Overview</h2>
+            <p>The Eastern Illinois University Academic Challenge (ACES) is a state-wide competition on a variety of different subjects, including Biology, Chemistry, and Math. The Computer Science exam broadly covers topics from logic gates and computer architecture to tree traversals and sorting algorithms.</p>
+        </div>
+    </div>
+</body>
+</html>
+

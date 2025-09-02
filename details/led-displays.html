@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Displays - will garrett</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .detail-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            min-height: 100vh;
+            background: #ffffff;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: translateX(-4px);
+        }
+
+        .back-button svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .detail-header {
+            margin-bottom: 40px;
+        }
+
+        .detail-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .detail-content {
+            line-height: 1.7;
+            color: #1a1a1a;
+        }
+
+        .detail-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 32px 0 16px 0;
+            color: #1a1a1a;
+        }
+
+        .detail-content p {
+            margin-bottom: 16px;
+            color: #6c757d;
+        }
+
+        .detail-content ul {
+            margin: 16px 0;
+            padding-left: 24px;
+            color: #6c757d;
+        }
+
+        .detail-content li {
+            margin-bottom: 8px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 24px 0;
+        }
+
+        .tech-tag {
+            background: #f8f9fa;
+            color: #495057;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid #e9ecef;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .action-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: #1a1a1a;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 1px solid #1a1a1a;
+        }
+
+        .action-button:hover {
+            background: #ffffff;
+            color: #1a1a1a;
+            transform: translateY(-2px);
+        }
+
+        .action-button svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .detail-container {
+                padding: 24px 16px;
+            }
+            
+            .detail-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="detail-container">
+        <a href="../index.html" class="back-button">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+            </svg>
+            Back to Portfolio
+        </a>
+
+        <div class="detail-header">
+            <h1 class="detail-title">LED Displays</h1>
+            <div class="action-buttons">
+                <a href="#" class="action-button">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                    </svg>
+                    Code
+                </a>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <p>A strip of LED matrices programmed to display stock prices, weather, news headlines, Discord messages, and more.</p>
+
+            <h2>Overview</h2>
+            <p>I built a 5-foot LED display board by daisy-chaining 8 LED matrices together atop a homemade wooden frame. I hooked these up to a Raspberry Pi that runs a series of Python scripts at boot allowing the user to control which feature they would like to see displayed. Input is controlled from a wireless number pad, which can both enter and exit from a given feature.</p>
+            <p>The primary feature that the LED display was originally based upon is the scrolling stock ticker that shows 50+ live stock prices pulled directly from Yahoo Finance. There is also a "News" section that displays business news headlines from NewsAPI and a "Weather" section with the current time, weather, and future forecast pulled from OpenWeatherMap's API. The last feature is Discord notifications, which works by setting a Discord bot as online within the few servers it is in and flashing received messages across the screen.</p>
+
+            <h2>Technologies</h2>
+            <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">Unix</span>
+            </div>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li>Real-time stock price display</li>
+                <li>Weather information updates</li>
+                <li>News headline scrolling</li>
+                <li>Discord message integration</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
